@@ -37,8 +37,17 @@ Here's a sample "posts list".
 This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
 We need to clean up the themes, make theme usage guides with theme-specific markup examples.
 
-     #include <stdio.h>
+```    #include <stdio.h>
     int main()
     {
         return 0;
-    }
+    }```
+
+
+<pre class="prettyprint">
+ #include &lt;stdio.h&gt;
+ int main()
+ {
+     return 0;
+ }
+</pre>

@@ -1,0 +1,32 @@
+/*This is a fake-Cobalt code highlighting color scheme.
+*I like it very much:)
+*/
+.com { color: #0088ff; }
+.lit { color: #ff628c; }
+.pun, .opn, .clo { color: #93a1a1; }
+.fun { color: #dc322f; }
+.str, .atv { color: #3ad900; }
+.kwd, .linenums .tag { color: #ff9d00; }
+.typ, .atn, .dec, .var { color: teal; }
+.pln { color: white; }
+
+.prettyprint {
+  padding: 9.5px;
+  background-color: #002240;
+  border: 1px solid #ccc;
+}
+.prettyprint.linenums {
+  -webkit-box-shadow: inset 40px 0 0 #002240, inset 41px 0 0 #004480;
+     -moz-box-shadow: inset 40px 0 0 #002240, inset 41px 0 0 #004480;
+          box-shadow: inset 40px 0 0 #002240, inset 41px 0 0 #004480;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin: 0 0 0 33px; /* IE indents via margin-left */
+} 
+ol.linenums li {
+  padding-left: 12px;
+  color: #bebec5;
+  line-height: 18px;
+}

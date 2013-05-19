@@ -1,0 +1,8 @@
+{% for post in abstract_list %}
+<div class="well">
+<>{{ post.title }}</>
+{{ post.content }}
+</div>
+{% endfor %}
+
+{% assign abstract_list = nil %}

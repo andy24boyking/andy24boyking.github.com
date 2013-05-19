@@ -1,9 +1,9 @@
-.com { color: #80c3fe; }
+.com { color: #0088ff; }
 .lit { color: #ff628c; }
 .pun, .opn, .clo { color: #93a1a1; }
 .fun { color: #dc322f; }
-.str, .atv { color: #228800; }
-.kwd, .linenums .tag { color: #ff9d00; }
+.str, .atv { color: #008e00; }
+.kwd, .linenums .tag { color: #ff8000; }
 .typ, .atn, .dec, .var { color: teal; }
 .pln { color: #333335; }
 

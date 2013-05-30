@@ -2,7 +2,7 @@
 layout: page
 tagline: 点滴思考
 ---
-{% assign abstract_list = site.posts%}
+{% assign abstract_list = site.posts %}
 {% include AH/abstract_list %}
 
 

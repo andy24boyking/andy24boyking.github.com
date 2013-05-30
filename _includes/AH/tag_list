@@ -1,0 +1,4 @@
+{% for tag in tags_list %} 
+ 	<li style="font-size: {{ tag[1].size | times:2 | plus:10 }}px;"><a href="{{ BASE_PATH }}{{ tags_path }}{{ tag[0] }}">{{ tag[0] }}</a></li>
+{% endfor %}
+{% assign tags_list = nil %}

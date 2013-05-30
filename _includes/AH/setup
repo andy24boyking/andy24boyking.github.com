@@ -1,0 +1,22 @@
+{% capture ahca %}
+{% if site.safe and site.AH.BASE_PATH and site.AH.BASE_PATH != '' %}
+  {% assign BASE_PATH = site.AH.BASE_PATH %}
+  {% assign HOME_PATH = site.AH.BASE_PATH %}
+{% else %}
+  {% assign BASE_PATH = nil %}
+  {% assign HOME_PATH = "/" %}
+{% endif %}
+
+{% if site.AH.ASSET_PATH %}
+  {% assign ASSET_PATH = site.AH.ASSET_PATH %}
+{% else %}
+  {% capture ASSET_PATH %}{{ BASE_PATH }}/assets/themes/{% endcapture %}
+{% endif %}
+
+{% if site.AH.categories_path %}
+  {% assign categories_path =  site.AH.categories_path %}
+{% endif %}
+{% if site.AH.tags_path %}
+  {% assign tags_path =  site.AH.tags_path %}
+{% endif %}
+{% endcapture %}{% assign ahca = nil %}

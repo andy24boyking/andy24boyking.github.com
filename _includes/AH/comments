@@ -1,0 +1,8 @@
+{% if site.AH.comments.provider != false %}
+
+{% case site.AH.comments.provider %}
+{% when "disqus" %}
+  {% include AH/comments-providers/disqus %}
+{% endcase %}
+
+{% endif %}

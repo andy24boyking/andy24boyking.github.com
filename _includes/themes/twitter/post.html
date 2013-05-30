@@ -7,10 +7,6 @@
     <div class="date">
       <span>{{ page.date | date_to_long_string }}</span>
     </div>
-    <div class="content">
-      {{ content }}
-    </div>
-
   {% unless page.categories == empty %}
     <ul class="tag_box inline">
       <li><i class="icon-folder-open"></i></li>
@@ -25,9 +21,11 @@
       {% assign tags_list = page.tags %}
       {% include JB/tags_list %}
     </ul>
-  {% endunless %}  
+  {% endunless %}
+    <div class="content">
+      {{ content }}
+    </div>  
 
-    <hr>
     <div class="pagination">
       <ul>
       {% if page.previous %}
@@ -43,20 +41,6 @@
       {% endif %}
       </ul>
     </div>
-    <hr>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'andy24boyking'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    {% include AH/comments %}
   </div>
 </div>

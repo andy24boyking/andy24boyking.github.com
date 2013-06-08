@@ -15,11 +15,13 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}{{ page.theme.name }}/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="{{ ASSET_PATH }}{{ page.theme.name }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}{{ page.theme.name }}/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="{{ ASSET_PATH }}{{ page.theme.name }}/bootstrap/js/jquery.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}{{ page.theme.name }}/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}{{ page.theme.name }}/bootstrap/js/bootstrap-popover.js"></script>
     <!--code highlighting supports-->
-    <link href="assets/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="assets/google-code-prettify/prettify.js"></script>
+    <link href="{{ ASSET_PATH }}google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="{{ ASSET_PATH }}google-code-prettify/prettify.js"></script>
     <!--my style-->
     <link rel="stylesheet" type="text/css" href="{{ ASSET_PATH }}AH/AHstyle.css">
     <!-- Le fav and touch icons -->
@@ -31,8 +33,8 @@
   -->
 
     <!-- atom & rss feed -->
-    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    <link href="{{ BASE_PATH }}{{ site.AH.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.AH.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
   </head>
 
   <body onload="prettyPrint()">
@@ -64,14 +66,13 @@
       </div>
       <hr>
       <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+        <p style="text-align: center">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
       </footer>
 
     </div>
-
-    {% include JB/analytics %}
+    <!-- analytics -->
   </body>
 </html>

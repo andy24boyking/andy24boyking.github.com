@@ -1,5 +1,5 @@
 {% for cate in category_list %}
-	<li><a href="{{ BASE_PATH }}{{ categories_path }}{{ cate[0] }}">{{ cate[0] }}</a></li>
+	<li class="square span6"><a href="{{ BASE_PATH }}{{ categories_path }}{{ cate[0] }}" title="read posts in {{ cate[0] }}"><i class="icon-bookmark"></i> {{ cate[0] }}</a></li>
 {% endfor %}
 
 {% assign category_list = nil %}

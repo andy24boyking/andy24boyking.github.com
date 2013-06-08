@@ -1,4 +1,13 @@
-{% for tag in tags_list %} 
- 	<li style="font-size: {{ tag[1].size | times:2 | plus:10 }}px;"><a href="{{ BASE_PATH }}{{ tags_path }}{{ tag[0] }}">{{ tag[0] }}</a></li>
-{% endfor %}
+{% if tags_list.first[1] != null %}
+	{% for tag in tags_list %}
+		<li style="font-size: {{ tag[1].size | times:2 | plus:10 }}px;">
+	 	<a href="{{ BASE_PATH }}{{ tags_path }}{{ tag[0] }}" title="read posts with tag {{ tag[0] }}">{{ tag[0] }}</a>
+	 	</li>
+	{% endfor %}
+{% else %}
+	{% for tag in tags_list %}
+		<li><a href="{{ BASE_PATH }}{{ tags_path }}{{ tag }}" title="read posts with tag {{ tag }}">{{ tag }}<sup>{{ site.tags[tag].size }}</sup></a></li>
+	{% endfor %}
+{% endif %}
+
 {% assign tags_list = nil %}

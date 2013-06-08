@@ -1,24 +1,26 @@
 {% unless cate == null %}
-<p>分类 {{ cate }} 下的文章</p>
+<p class="belong">
+{ 属于分类 <span style="color:#0088cc;">{{ cate }}</span> 的文章 }
+</p>
 {% endunless %}
-{% unless ta == null %}
-<p>标签 {{ ta }} 下的文章</p>
+{% unless tag == null %}
+<p class="belong">
+{ 含有标签 <span style="color:#0088cc;">{{ tag }}</span> 的文章 }
+</p>
 {% endunless %}
 
 {% for post in abstract_list %}
-{% if cate == null or cate == post.category %}
 <div class="abstract">
 <div class="abstract-header" onclick="window.open('{{ BASE_PATH }}{{ post.url }}')">
 {{ post.title }}
-<span style="color:#a0a0a0; float:right">{{ post.date | date_to_string }}</span>
+<span class="abstract-date">{{ post.date | date_to_string }}</span>
 </div>
 {{ post.content | split: '<!-- excerpt -->' | first}}
 
 <a href="{{ post.url }}">... 阅读全文</a>
 </div>
-{% endif %}
 {% endfor %}
 
 {% assign abstract_list = nil %}
 {% assign cate = nil %}
-{% assign ta = nil %}
+{% assign tag = nil %}

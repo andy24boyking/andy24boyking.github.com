@@ -2,5 +2,7 @@
 layout: page
 title : Archives
 ---
-{% assign posts_collate = site.posts %}
-{% include JB/posts_collate %}
+<div class="abstract">
+{% assign archive_list = site.posts %}
+{% include AH/archive_list %}
+</div>

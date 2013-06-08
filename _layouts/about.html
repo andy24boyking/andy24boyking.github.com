@@ -1,0 +1,22 @@
+---
+layout: page
+---
+{% include AH/setup %}
+<div class="bubble">
+{{ content }}
+</div>
+<div class="row-fluid">
+<div class="span10">
+</div>
+<div class="span2">
+<div class="bubble-triangle">
+</div>
+<div id="forkme" onMouseover="fork()">
+	<img title="联系我" src="http://www.gravatar.com/avatar/7bc4754c1283cef1899e9568df75b9d0" />
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+function fork(){$('#forkme').popover({html:true,placement:'left',content:contact});}function contact(){var str='<a href="http://www.renren.com/254379147">人人<a> ';str+='<a href="http://weibo.com/u/2172154754">新浪微博<a> ';str+='<a href="https://twitter.com/andy24boyking">twitter<a> ';str+='<a href="https://www.facebook.com/andy24boyking">facebook<a>';return str;}
+</script>

@@ -21,7 +21,7 @@
 </div>
 {% endfor %}
 {% if abstract_list.size > 20 %}
-<p class="belong">阅读<a href="{{ BASE_PATH }}archives">更多</a>文章</p>
+<p class="belong">阅读 <a href="{{ BASE_PATH }}archives">更多</a> 文章</p>
 {% endif %}
 {% assign abstract_list = nil %}
 {% assign cate = nil %}

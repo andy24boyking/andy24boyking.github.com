@@ -13,8 +13,16 @@ body a:hover {
   margin: 0 auto;
   max-width: 950px;
 }
-.container-narrow>hr{ border-bottom:1.5px solid #fefefe; }
-.container-narrow>.content>.page-header { border-bottom: 1.5px solid #fefefe; }
+.container-narrow hr{ border-bottom:2px solid #fefefe; }
+.container-narrow .page-header { border-bottom: 2px solid #fefefe; }
+.row-fluid .span-main {
+  width: 73%;
+  *width: 73%;
+}
+.row-fluid .span-side {
+  width: 24.8766%;
+  *width: 24.8766%;
+}
 .abstract{
 	min-height:20px;padding:19px 12px;margin-bottom:40px;
 	background-color:#fafafa;
@@ -24,6 +32,28 @@ body a:hover {
 	-moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.05) inset;
 	box-shadow:0 1px 1px rgba(0, 0, 0, 0.05) inset;
 	text-shadow: 0 1px 0 #fff;
+}
+.abstract>p>code{
+	color: #0088cc;
+}
+.abstract>ul>li code{
+	color: #0088cc;
+}
+.abstract>ol>li code{
+	color: #0088cc;
+}
+.abstract h1 {
+	margin-top: 20px;
+	font-size: 24.5px;
+}
+.abstract h2 {
+	font-size: 18.5px;
+}
+.abstract h3 {
+	font-size: 14px;
+}
+.abstract h4 {
+	font-size: 11.9px;
 }
 .abstract-header{
 	height: 40px;
@@ -51,6 +81,7 @@ body a:hover {
 	line-height: 40px;
 }
 .sidebox>ul>li.square {
+	margin-left:0;
 	list-style-type: none;
 	font-size: 13px;
 	border-bottom: 1px dashed #ddd;
@@ -113,5 +144,13 @@ body a:hover {
 }
 #forkme>img {
 	cursor: pointer;
-	-webkit-border-radius:8px;-moz-border-radius:4x;border-radius:8px;
+	-webkit-border-radius:8px;-moz-border-radius:8x;border-radius:8px;
+}
+.quote {
+	border-color: #e5e5e5;
+	color: #a0a0a0;
+}
+.post-image {
+	text-align: center;
+	margin: 30px 0;
 }

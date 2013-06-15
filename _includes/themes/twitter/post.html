@@ -3,7 +3,7 @@
 </div>
 
 <div class="row-fluid">
-  <div class="span9">
+  <div class="span-main">
     <div class="abstract">
       <div class="abstract-header">{{ page.title }}<span class="abstract-date">{{ page.date | date_to_string }}</span></div>
       {{ content }}
@@ -22,7 +22,7 @@
     </div>
     {% include AH/comments %}
   </div>
-  <div class="span3 abstract">
+  <div class="span-side abstract">
     <div class="sidebox">
       {% unless page.category == null %}
         <h5><i class="icon-bookmark"></i>&nbsp;&nbsp;文章分类</h5>

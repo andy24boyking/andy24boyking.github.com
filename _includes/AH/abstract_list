@@ -9,7 +9,7 @@
 </p>
 {% endunless %}
 
-{% for post in abstract_list %}
+{% for post in abstract_list limit:20 %}
 <div class="abstract">
 <div class="abstract-header" onclick="window.open('{{ BASE_PATH }}{{ post.url }}')">
 {{ post.title }}
@@ -20,7 +20,9 @@
 <a href="{{ post.url }}">... 阅读全文</a>
 </div>
 {% endfor %}
-
+{% if abstract_list.size > 20 %}
+<p class="belong">阅读<a href="{{ BASE_PATH }}archives">更多</a>文章</p>
+{% endif %}
 {% assign abstract_list = nil %}
 {% assign cate = nil %}
 {% assign tag = nil %}

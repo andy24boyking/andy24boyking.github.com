@@ -9,6 +9,5 @@ title: About Me
 
 计算机科学真的是一门让我由衷欣赏、喜爱的学科，能够投身于此我感到幸运。但身为菜鸟的我又时刻感觉到自己懂得还太少，因此建立了我的个人博客来督促自己多读书、多思考、多尝试。我会在这里记录自己的学习过程，以及所思所想来和大家分享。希望大家能通过评论我博文的方式来和我交流。
 
-我的博客使用 [Jekyll](http://jekyllrb.com/) 引擎生成，托管在支持Jekyll引擎的 [GitHub Pages](http://pages.github.com/) 上，
-使用Textile或者Markdown标记语言来编写博文，使用git来进行版本维护。
-有关博客建立的方法，感兴趣的同学可以查看 [这篇文章](#) 。也欢迎大家通过RSS阅读器来订阅我的博客。
+我的博客使用 [Jekyll](http://jekyllrb.com/) 引擎生成，托管在支持Jekyll引擎的 [GitHub Pages](http://pages.github.com/) 上，使用 Markdown 或者 Textile 标记语言来编写博文，使用 git 来进行版本维护。
+有关博客建立的方法，感兴趣的同学可以查看 [这篇文章]({{HOME_PATH}}/2013/06/06/using-jekyll-to-build-blog) 。也欢迎大家通过RSS阅读器来订阅我的博客。

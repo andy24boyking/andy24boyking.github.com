@@ -160,8 +160,9 @@ title: 你好，jekyll
 {% include AH/print_code %}
 
 简单讲解一下。大家注意到这两个文档的开头均有以三个短杠开始和结束的部分，这是 **YAML front matter** 块，该块必须位于文档最开头，并且里的内容会被 Jekyll 优先处理。
-上面两个文档中均有的 `layout: default` 即为该文档以 mydefault 为模板解析。
-而在文章的文档里(大家注意命名格式，前面已经提到过)还有一条 `title: 你好，jekyll` 则是设置该文档的 title ，如果没有设置，则 Jekyll 会从标题中解析，得到 title 为 "hello jekyll"。
+上面两个文档中均有的 `layout: mydefault` 即为该文档以 mydefault 为模板解析。
+
+而在文档  *2013-06-06-hello-jekyll.md* 里(大家注意命名格式，前面已经提到过)还有一条 `title: 你好，jekyll` 则是设置该文档的 title ，如果没有设置，则 Jekyll 会从标题中解析，得到 title 为 "hello jekyll"。
 有关 YAML front matter 的介绍可以参看官网的 [Front-matter 说明页](http://jekyllrb.com/docs/frontmatter/) 。
 这篇文档的内容即为打印文章标题，文章创建日期，文章内容。
 至于 # 和 ## 则分别表示该行内容为一级标题和二级标题，这是 Markdown 的语法。

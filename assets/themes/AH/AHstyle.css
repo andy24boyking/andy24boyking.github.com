@@ -16,7 +16,7 @@ body a:hover {
 .container-narrow hr{ border-bottom:2px solid #fefefe; }
 .container-narrow .page-header { border-bottom: 2px solid #fefefe; }
 .row-fluid .span-main {
-  width: 73%;
+  width: 72.9999%;
   *width: 73%;
 }
 .row-fluid .span-side {

@@ -125,7 +125,7 @@ Jekyll 依赖以下的gems模块：liquid、fast-stemmer、classifier、director
 ##填写 \_config.yml
 
 关于 \_config.yml ，这里暂时不说太细，大家知道可以自定义变量 variable ，并且在 liquid 里能以 site.variable 的形式调用即可。Jekyll 官网的 [configuration 说明页](http://jekyllrb.com/docs/configuration/)的最下方提供了一个可行的 \_config.yml 文件模板，大家可以暂时用这个。
-在[下一节]({{page.url}}#_jekyll_)里大家还会接触到很多别人的 \_config.yml 文件，
+在[后面的章节](#_jekyll_)里大家还会接触到很多别人的 \_config.yml 文件，
 看得多试得多了就知道自己该怎么灵活定义了。
 
 ##建立index.html以及发一篇博文

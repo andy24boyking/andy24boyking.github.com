@@ -11,17 +11,17 @@ body a:hover {
 }
 .container-narrow {
   margin: 0 auto;
-  max-width: 950px;
+  max-width: 1024px;
 }
 .container-narrow hr{ border-bottom:2px solid #fefefe; }
 .container-narrow .page-header { border-bottom: 2px solid #fefefe; }
 .row-fluid .span-main {
-  width: 72.9999%;
-  *width: 73%;
+  width: 68.89%;
+  *width: 69%;
 }
 .row-fluid .span-side {
-  width: 24.8766%;
-  *width: 24.8766%;
+  width: 28.8766%;
+  *width: 28.8766%;
 }
 .abstract{
 	min-height:20px;padding:19px 12px;margin-bottom:40px;

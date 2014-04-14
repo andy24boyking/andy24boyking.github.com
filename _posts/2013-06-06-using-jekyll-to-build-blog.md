@@ -29,6 +29,7 @@ Jekyll 提供了一套模板目录来作为构建网站的基础框架，以及�
 来安装 Ruby 。然后使用 RubyGems 来安装 Jekyll：
 
     $ gem install jekyll
+
 Jekyll 依赖以下的gems模块：liquid、fast-stemmer、classifier、directory_watcher、syntax、maruku、kramdown、posix-spawn 和 albino 。
 它们会在执行上述安装命令的时候被gem install命令自动安装。
 
@@ -49,6 +50,7 @@ Jekyll 依赖以下的gems模块：liquid、fast-stemmer、classifier、director
         |-- css/
             |-- style.css
         |-- javascripts/
+
 简单地介绍一下每个部分的功能：
 
 - **\_config.yml**  
@@ -57,15 +59,20 @@ Jekyll 依赖以下的gems模块：liquid、fast-stemmer、classifier、director
 - **\_includes**  
   可将一些能与 \_layouts 和 \_posts 中的文件混合、匹配使用，并且具有重用价值的文件存放于此(按照我的经验，多为liquid代码。使用的时候，
   在文件中嵌入liquid标签 {% capture liquidcode %}||.% include path\filename %.||{% endcapture %}{% include AH/print_code %} 来调用 \_includes\path\filename 文件。
+
 - **\_layouts**  
   “模板文件”存放于此。所谓的模板文件常用来进行网页布局，模板文件之间也可以嵌套调用。
+
 - **\_posts**  
   所有博客文章的文本文件存放于此。每篇博文均必须以 "2013-06-06-using-jekyll-to-build-blog" 这样的格式命名，文件格式可以是 .html、.md、.textile，你可以选择自己熟悉的标记语言或者直接使用html来书写博文。还是以本文为例，如果在文档中没有指定 title 属性值，则 title 默认为 "using jekyll to build blog" 。
+
 - **\_site**  
   该路径下存放的是 Jekyll 最终生成的静态站点的所有文件，每次运行 Jekyll 引擎的时候自动生成。
 所以假如你和我一样使用 GitHub 托管博客，可以把 \_site 加入到 .gitignore 列表中。
+
 - **index.html**  
   提供静态站点的首页，同样，也可以是 index.md 或者 index.textile。这也适用于任何其他自建的文件。
+
 - **assets(其他目录或文件)**  
   我们还可以根据自己的网站需要创建任意的目录或文件，例如我创建了一个 assets/ 目录，将站点所用到的 css、js 文件以及图片均存放于此进行管理。
 
@@ -74,6 +81,7 @@ Jekyll 依赖以下的gems模块：liquid、fast-stemmer、classifier、director
 在 Jekyll 项目的主文件夹下运行如下命令
 
     $ jekyll --server
+
 这样可以在本地启动一个临时的web服务器，在浏览器中输入 `http://localhost:4000` 便可以访问生成的静态站点。这样可以方便在本地调试站点。注意，在有些系统里，可能还需要手动添加 Jekyll 的环境变量。
 
 #开始建立博客
@@ -84,7 +92,8 @@ Jekyll 依赖以下的gems模块：liquid、fast-stemmer、classifier、director
 
 首先在 \_layouts 下创建模板文件 mydefault.html ，内容如下：
 
-{% capture htmlblock %}<!DOCTYPE html>
+{% assign lang = 'html' %}
+{% capture codeblock %}<!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -132,7 +141,8 @@ Jekyll 依赖以下的gems模块：liquid、fast-stemmer、classifier、director
 
 *index.html* 文件内容如下：
 
-{% capture htmlblock %}---
+{% assign lang = 'rb' %}
+{% capture codeblock %}---
 layout: mydefault
 ---
 <p> 最新文章 </p>
@@ -148,7 +158,8 @@ layout: mydefault
 
 在 \_posts 里新建一篇文档 *2013-06-06-hello-jekyll.md* ，内容如下：
 
-{% capture htmlblock %}---
+{% assign lang = 'rb' %}
+{% capture codeblock %}---
 layout: mydefault
 title: 你好，jekyll
 ---

@@ -27,6 +27,10 @@ author :
 #
 production_url : http://andy24boyking.github.io
 
+# markdown interpreter on github has changed from Maruku(defalult) to kraamdown 
+markdown:      kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+
 # Define my own theme AH
 AH:
   version : 0.1.0

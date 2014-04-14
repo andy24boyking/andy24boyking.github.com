@@ -6,4 +6,5 @@
   {% include AH/print_liquid %}
 
 -->{% endcomment %}
-{% if htmlblock != nil %}<pre class="prettyprint linenums"><code>{{ htmlblock | replace:"||.", "&#123;" | replace:".||", "&#125;" | replace:">", "&gt;" | replace:"<", "&lt;" }}</code></pre>{% elsif liquidblock != nil %}<pre><code>{{liquidblock | replace:"||.", "&#123;" | replace:".||", "&#125;" | replace:">", "&gt;" | replace:"<", "&lt;" }}</code></pre>{% elsif liquidcode != nil %}<code>{{liquidcode | replace:"||.", "&#123;" | replace:".||", "&#125;" | replace:">", "&gt;" | replace:"<", "&lt;" }}</code>{% endif %}{% assign htmlblock = nil %}{% assign liquidcode = nil %}{% assign liquidblock = nil %}
+{% if codeblock != nil %}<tag style="color:#bebec5;">//language: {{ lang }}</tag>
+<pre class="prettyprint linenums {%if lang != nil %}lang-{{ lang }}{% endif %}">{{ codeblock | replace:"||.", "&#123;" | replace:".||", "&#125;" | replace:">", "&gt;" | replace:"<", "&lt;" }}</pre>{% elsif liquidcode != nil %}<code>{{liquidcode | replace:"||.", "&#123;" | replace:".||", "&#125;" | replace:">", "&gt;" | replace:"<", "&lt;" }}</code>{% endif %}{% assign codeblock = nil %}{% assign liquidcode = nil %}

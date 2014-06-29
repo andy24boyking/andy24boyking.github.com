@@ -1,4 +1,4 @@
 ---
 layout: category
-title: web-dev
+title: algorithm
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 利用Jekyll构建个人静态博客
-category: web-dev
+category: technoledgy
 tags: [jekyll, liquid, markdown]
 ---
 一直想建立一个自己的博客来记录学习历程，与大家分享个人的一些思考。可是我既不想折腾服务器、申请域名，也不愿使用各大网站提供的博客系统，这个想法就一直耽搁着。
@@ -10,9 +10,9 @@ tags: [jekyll, liquid, markdown]
 
 #Jekyll 简介
 
-<blockquote class="quote">
-	Jekyll is a simple, blog aware, static site generator.
-</blockquote>
+{:.quote}
+> Jekyll is a simple, blog aware, static site generator.
+
 这是来自 Jekyll 官网的一段说明。Jekyll 是一个简单的，适用于博客平台的，静态网站生成器。
 Jekyll 提供了一套模板目录来作为构建网站的基础框架，以及快速构建所需页面的Rakefile，
 并在此基础上支持 [Markdown](http://daringfireball.net/projects/markdown/) 、
@@ -81,6 +81,8 @@ Jekyll 依赖以下的gems模块：liquid、fast-stemmer、classifier、director
 在 Jekyll 项目的主文件夹下运行如下命令
 
     $ jekyll --server
+
+(注：从 Jekyll1.0 起启动本地web服务器的命令变为了 `jekyll serve` ，另外可使用命令 `jekyll new` 来生成一个默认的 Jekyll 项目结构。)
 
 这样可以在本地启动一个临时的web服务器，在浏览器中输入 `http://localhost:4000` 便可以访问生成的静态站点。这样可以方便在本地调试站点。注意，在有些系统里，可能还需要手动添加 Jekyll 的环境变量。
 

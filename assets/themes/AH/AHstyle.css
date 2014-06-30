@@ -1,3 +1,13 @@
+@font-face {
+	font-family: 'MonacoRegular';
+	src: url('fonts/Monaco.eot');
+	src: local('Monaco Regular'),
+	local('Monaco'),
+	url('Monaco.woff') format('woff'),
+	url('fonts/Monaco.ttf') format('truetype'),
+	url('fonts/Monaco.svg#Monaco') format('svg');
+}
+
 body {
 	padding-top: 60px;
 	background-image: url(images/bg41_1.jpg);
@@ -153,4 +163,9 @@ body a:hover {
 .post-image {
 	text-align: center;
 	margin: 30px 0;
+}
+
+code,
+pre {
+	font-family: MonacoRegular;
 }

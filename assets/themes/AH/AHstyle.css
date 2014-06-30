@@ -2,7 +2,6 @@
 	font-family: 'MonacoRegular';
 	src: url('fonts/Monaco.eot');
 	src: local('Monaco Regular'),
-	local('Monaco'),
 	url('Monaco.woff') format('woff'),
 	url('fonts/Monaco.ttf') format('truetype'),
 	url('fonts/Monaco.svg#Monaco') format('svg');
@@ -165,7 +164,6 @@ body a:hover {
 	margin: 30px 0;
 }
 
-code,
-pre {
+/*code, pre {
 	font-family: MonacoRegular;
-}
+}*/

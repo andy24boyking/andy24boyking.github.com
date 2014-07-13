@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 越界写内存造成的程序崩溃问题
-category: programing
+category: programming
 tags: [linux, gdb]
 ---
 

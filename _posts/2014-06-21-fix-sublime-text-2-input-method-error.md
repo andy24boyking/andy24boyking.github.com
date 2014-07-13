@@ -2,7 +2,7 @@
 layout: post
 title: 解决Linux下Sublime Text 2中文输入法问题
 category: programming
-tags: [gtk, sublime]
+tags: [linux, gtk, sublime]
 ---
 原文地址：[http://my.oschina.net/wugaoxing/blog/121281](http://my.oschina.net/wugaoxing/blog/121281)
 

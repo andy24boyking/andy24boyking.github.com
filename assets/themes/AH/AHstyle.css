@@ -164,6 +164,12 @@ body a:hover {
 	margin: 30px 0;
 }
 
+.terminal {
+	/*background-color: #5e2750;*/ /*Ubuntu Mid Aubergine*/
+	background: rgba(44, 0, 30, 0.9);
+	color: white;
+}
+
 /*code, pre {
 	font-family: MonacoRegular;
 }*/

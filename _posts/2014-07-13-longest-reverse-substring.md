@@ -9,3 +9,5 @@ tags: [string]
 
 给定一个字符串 *L* = *a*<sub>0</sub>*a*<sub>1</sub> ... *a*<sub>n-1</sub> ，若 *L* 的最长回文子串为 *L'* = *a*<sub>i</sub>*a*<sub>i+1</sub> ... *a*<sub>j</sub> (0 &le; i &le; j &le; n-1)。求出 *L'* 起始位置 *i* 以及 *L'* 的长度 *n* 。
 
+<!-- excerpt -->
+

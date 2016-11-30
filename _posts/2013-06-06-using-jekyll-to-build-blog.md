@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 利用Jekyll构建个人静态博客
-category: technoledgy
+category: technology
 tags: [jekyll, liquid, markdown]
 ---
 一直想建立一个自己的博客来记录学习历程，与大家分享个人的一些思考。可是我既不想折腾服务器、申请域名，也不愿使用各大网站提供的博客系统，这个想法就一直耽搁着。

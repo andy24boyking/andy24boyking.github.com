@@ -8,7 +8,7 @@ tags: [linux, linked list]
 
 常见的链表数据结构至少包含数据域和指针域，按指针域的组织形式可分为单链表、双链表、循环链表等。由于这不是本文的重点，不在此赘述。
 
-##Linux内核链表结构
+## Linux内核链表结构
 
 通常一个单链表结点的数据结构定义往往如下：
 
@@ -33,7 +33,7 @@ Linux 内核链表是一个双向循环链表结构，结构体定义如下：
 {% endcapture %}
 {% include AH/print_code %}
 
-###链表初始化
+### 链表初始化
 
 循环链表的初始化即将前、后指针都指向自己，分为静态和动态两种：
 
@@ -62,7 +62,7 @@ static inline void INIT_LIST_HEAD(struct list_head *list)
 {% endcapture %}
 {% include AH/print_code %}
 
-###插入操作
+### 插入操作
 
 Linux 提供了在表头和表尾插入结点两种方式，由于是双向循环链表，均可通过调用内置函数 `__list_add` 来方便地实现：
 
@@ -90,7 +90,7 @@ static inline void list_add_tail(struct list_head *new, struct list_head *head)
 {% endcapture %}
 {% include AH/print_code %}
 
-###删除操作
+### 删除操作
 
 删除结点，准确的说是将结点从链表中脱离的实现如下：
 
@@ -134,7 +134,7 @@ Linux 提供的删除操作还有 `list_del_init` ，即将指定的结点从链
 {% endcapture %}
 {% include AH/print_code %}
 
-###移动结点操作
+### 移动结点操作
 
 Linux 提供了两个移动结点的操作 `list_move` 和 `list_move_tail`，功能是把指定结点移动到另一个链表的表头或者表尾，其实就是删除和添加的组合。
 
@@ -155,7 +155,7 @@ static inline void list_move_tail(struct list_head *list,
 {% endcapture %}
 {% include AH/print_code %}
 
-###链表合并操作
+### 链表合并操作
 
 Linux 提供了合并两个链表的操作 `list_sllice` 和 `list_splice_init` 。
 
@@ -194,7 +194,7 @@ static inline void list_splice_init(struct list_head *list,
 
 该操作实现了将一个非空的链表 list 插入到另一个链表的 head 处。可以形象的理解成将两个环(循环链表)拆开，然后分别首首相接、尾尾相接，合成一个新的环(循环链表)。因此对 list 有一个判空的步骤。而合并后原链表中的 list 结点已经被弃用， `list_splice_init` 则在合并之后将 list 初始化为一个空链表头。
 
-###返回上层结构操作 <i class="icon-star"></i>
+### 返回上层结构操作 <i class="icon-star"></i>
 
 这是 Linux 链表结构最关键也是实现的最巧妙的地方。前面已经提过，Linux 内核的链表结构是将链表结点嵌入到元素结构体中。一个已经建立好的链表可以用下图来简单表示：
 
@@ -258,7 +258,7 @@ list_entry 宏就是对 container_of 宏的一个简单封装，实现了我们�
 ![image]({{BASE_PATH}}/assets/posts/images/2014-05-21-container-of.png)
 container_of 宏示意图
 
-###遍历链表操作
+### 遍历链表操作
 
 遍历是链表的基本操作，Linux 提供了一组设定好 for 循环条件的宏来提供遍历操作。
 
@@ -290,7 +290,7 @@ list_for_each_safe，顾名思义，提供了安全的链表遍历。为什么�
 
 另外很多介绍 Linux 内核链表的文章会提到遍历时的 prefetch 预取操作来提高遍历速度。实际上有牛人证明了执行 prefetch 所消耗的时间超出了它缓存带来的好处，实际上反而影响了效率，因此从 3.0 内核开始 prefetch 操作已经从链表，哈希表以及 sk_buff 表的遍历操作中移除了([详情点这里](http://lwn.net/Articles/444336/))。
 
-##应用
+## 应用
 
 在实验室最近的项目中我需要编写一个配置管理的守护程序，基本工作流程就是：启动时读取各个配置文件建立起各个配置项的链表，web 前端需要提供配置的显示、修改、删除等功能，因此需要和 配置管理程序通信；同时还需要将各个配置传入相应功能模块中使之生效。因此提供给功能模块和web前端的通信接口应该只有数据块的交互，链表的增删改查都是配置管理程序内部的事情，Linux 内核链表结构的特点就很符合我的需求。
 

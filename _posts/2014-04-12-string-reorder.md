@@ -6,7 +6,7 @@ tags: [microsoft, string]
 ---
 今天参加了微软实习生招聘的“笔试”，即在线测试环节，英文描述的4道编程题，比赛时间为2个小时。形式为在线提交代码（支持C、C++、Java、C#四种语言），由系统进行测试来评判你的代码是否通过(AC)。由于我比较水，只通过其中的第二题。第一题的题目如下：
 
-#题目1 : String reorder
+# 题目1 : String reorder
 
 时间限制:10000ms
 
@@ -14,7 +14,7 @@ tags: [microsoft, string]
 
 内存限制:256MB
 
-##Description
+## Description
 
 For this question, your program is required to process an input string containing only ASCII characters between ‘0’ and ‘9’, or between ‘a’ and ‘z’ (including ‘0’, ‘9’, ‘a’, ‘z’).
 
@@ -26,23 +26,23 @@ Your program should output string “<invalid input string>” when the input co
 
 <!-- excerpt -->
 
-##Input
+## Input
 
 Input consists of multiple cases, one case per line. Each case is one string consisting of ASCII characters.
 
-##Output
+## Output
 
 For each case, print exactly one line with the reordered string based on the criteria above.
 
 
-##样例输入
+## 样例输入
 
     aabbccdd
     007799aabbccddeeff113355zz
     1234.89898
     abcdefabcdefabcdefaaaaaaaaaaaaaabbbbbbbddddddee
 
-##样例输出
+## 样例输出
 
     abcdabcd
     013579abcdefz013579abcdefz

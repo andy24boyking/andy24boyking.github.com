@@ -5,7 +5,7 @@ category: code interview
 tags: [microsoft]
 ---
 
-#题目3 : Reduce inversion count
+# 题目3 : Reduce inversion count
 
 时间限制:10000ms
 
@@ -13,7 +13,7 @@ tags: [microsoft]
 
 内存限制:256MB
 
-##Description
+## Description
 
 Find a pair in an integer array that swapping them would maximally decrease the inversion count of the array. If such a pair exists, return the new inversion count; otherwise returns the original inversion count.
 
@@ -30,21 +30,21 @@ InversionCountOfSwap({3, 1, 2})=><br/>
 
 <!-- excerpt -->
 
-##Input
+## Input
 
 Input consists of multiple cases, one case per line.Each case consists of a sequence of integers separated by comma. 
 
-##Output
+## Output
 
 For each case, print exactly one line with the new inversion count or the original inversion count if it cannot be reduced.
 
 
-##样例输入
+## 样例输入
 
     3,1,2
     1,2,3,4,5
 
-##样例输出
+## 样例输出
 
     1
     0

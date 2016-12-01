@@ -8,7 +8,7 @@ tags: [jekyll, liquid, markdown]
 直到前不久无意中了解到了 [Jekyll](http://jekyllrb.com/) + [GitHub Pages](http://pages.github.com/) 来构建博客的方法，这种方法很合我的胃口，
 于是着手学习并搭建了这个博客。在此我简单的介绍下利用Jekyll构建博客的方法，相关的知识，以及我的一些经验来作为此博客的第一篇文章。
 
-#Jekyll 简介
+# Jekyll 简介
 
 {:.quote}
 > Jekyll is a simple, blog aware, static site generator.
@@ -57,7 +57,7 @@ Jekyll 依赖以下的gems模块：liquid、fast-stemmer、classifier、director
   存放 Jekyll 所需的配置文件，例如我把一些常用的路径作为变量存放于此，用 liquid 标记语言写页面生成代码的时候可以方便调用。
 
 - **\_includes**  
-  可将一些能与 \_layouts 和 \_posts 中的文件混合、匹配使用，并且具有重用价值的文件存放于此(按照我的经验，多为liquid代码。使用的时候，
+  可将一些能与 \_layouts 和 \_posts 中的文件混合、匹配使用，并且具有重用价值的文件存放于此(按照我的经验，多为liquid代码)。使用的时候，
   在文件中嵌入liquid标签 {% capture liquidcode %}||.% include path\filename %.||{% endcapture %}{% include AH/print_code %} 来调用 \_includes\path\filename 文件。
 
 - **\_layouts**  
@@ -86,11 +86,11 @@ Jekyll 依赖以下的gems模块：liquid、fast-stemmer、classifier、director
 
 这样可以在本地启动一个临时的web服务器，在浏览器中输入 `http://localhost:4000` 便可以访问生成的静态站点。这样可以方便在本地调试站点。注意，在有些系统里，可能还需要手动添加 Jekyll 的环境变量。
 
-#开始建立博客
+# 开始建立博客
 
 接下来我以一个完全不加任何 css 样式简单的例子来说明。
 
-##在 \_layouts 下建立模板
+## 在 \_layouts 下建立模板
 
 首先在 \_layouts 下创建模板文件 mydefault.html ，内容如下：
 
@@ -133,13 +133,13 @@ Jekyll 依赖以下的gems模块：liquid、fast-stemmer、classifier、director
 
     baseurl : /
 
-##填写 \_config.yml
+## 填写 \_config.yml
 
 关于 \_config.yml ，这里暂时不说太细，大家知道可以自定义变量 variable ，并且在 liquid 里能以 site.variable 的形式调用即可。Jekyll 官网的 [configuration 说明页](http://jekyllrb.com/docs/configuration/)的最下方提供了一个可行的 \_config.yml 文件模板，大家可以暂时用这个。
 在[后面的章节](#_jekyll_)里大家还会接触到很多别人的 \_config.yml 文件，
 看得多试得多了就知道自己该怎么灵活定义了。
 
-##建立index.html以及发一篇博文
+## 建立index.html以及发一篇博文
 
 *index.html* 文件内容如下：
 
@@ -165,8 +165,8 @@ layout: mydefault
 layout: mydefault
 title: 你好，jekyll
 ---
-#||.{ page.title }.||
-##||.{ page.date | date_to_string }.||
+# ||.{ page.title }.||
+## ||.{ page.date | date_to_string }.||
 
 第一篇博文。你好，jekyll 。
 {% endcapture %}
@@ -186,11 +186,11 @@ title: 你好，jekyll
 <p class="post-image"><img src="{{BASE_PATH}}/assets/posts/images/2013-06-06-post.png"><br/>文章页</p>
 
 
-#在 GitHub 上托管博客
+# 在 GitHub 上托管博客
 
 如果需要把网站托管在 GitHub 上，只需要把 Jekyll 项目添加到 git 仓库，并且同步到 GitHub 上即可。项目名称要起为 `username.github.com` 的形式，这样就会被解析为 GitHub Page ，生成对应域名的网站。托管在 GitHub 上可以充分享受 git 版本控制带来的方便，网站可以随时退回到某个版本状态，在本地写好了新的文章，只需 commit 即可。如果你对 git 和 GitHub 还不熟悉，在网上可以查到很多相关资料，我这里就不再赘述，推荐一个简单明了的 [入门介绍](http://rogerdudler.github.io/git-guide/index.zh.html) 。
 
-#使用 Jekyll 主题模板快速建立博客
+# 使用 Jekyll 主题模板快速建立博客
 
 有了上面的认识后，想必大家都已经摩拳擦掌开始规划自己的博客了。一开始我也是如此，开始自己设计版面，写 css 样式，制作模板。
 但是我很快就意识到，这对于不熟悉网页前端开发的我是个极其巨大的任务，而且更重要的是，我费尽心思设计出来的版面总是显得太简陋、不好看 :( 。所以对于大多数和我一样不擅长做网页设计的程序员来说，最好的方法是在现有模板的基础上进行修改，来创建一个看得过去的个人博客。
@@ -200,7 +200,7 @@ Jekyll 提供了一个[站点推荐列表](https://github.com/mojombo/jekyll/wik
 顾名思义，这个模板主题是基于当前已经滥用到审美疲劳的 [Twitter Bootstrap](http://twitter.github.io/bootstrap/) 前端模板的基础上开发出来的。
 话虽如此，我还是选择在 JB(不是一个很友好的缩写...) 的基础上创建的我的博客系统，并且在仔细学习研究后几乎重写了原作者的框架，似乎现在可以称之为 andy-Bootstrap 了 :) 。当然这是玩笑话，没有 Jekyll-Bootstrap 的帮助我的博客是建立不起来的。JB 的 git 地址是 `https://github.com/plusjade/jekyll-bootstrap.git` 。
 
-#总结
+# 总结
 
 如何使用 Jekyll 建立个人静态博客的相关事项已经基本介绍完毕，下面简单总结一下需要使用的工具和需要参考的资料。
 

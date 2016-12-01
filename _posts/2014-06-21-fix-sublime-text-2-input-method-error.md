@@ -126,4 +126,4 @@ OK，此时就可以看见当前目录下生成了共享库 **libsublime-imfix.s
 {:.post-image}
 ![image]({{BASE_PATH}}/assets/posts/images/2014-06-21-input-method.png)
 
-此方法由 sublime 论坛上的 [cjacker 提供](http://www.sublimetext.com/forum/viewtopic.php?f=3&t=7006&start=10#p41343)。 
+此方法由 sublime 论坛上的 [cjacker 提供](http://www.sublimetext.com/forum/viewtopic.php?f=3&t=7006&start=10#p41343)。

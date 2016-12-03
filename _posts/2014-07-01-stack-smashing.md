@@ -7,7 +7,6 @@ tags: [linux, gdb]
 
 最近在 linux 下做一个无线防护系统的配置管理模块，测试运行一部分代码时程序崩溃，出现了下方的提示：
 
-{:.terminal}
     *** stack smashing detected ***: /home/work/wlanconfd/wlancfd terminated
     ======= Backtrace: =========
     /lib/i386-linux-gnu/libc.so.6(__fortify_fail+0x45)[0xb7f23eb5]
@@ -43,7 +42,6 @@ tags: [linux, gdb]
 
 应该是程序中发生了栈溢出，导致了函数的返回指针被修改，进而函数返回时会发现返回的代码段指针错误，提示上述的"stack smashing detected"。用 gdb 调试，在出现上述崩溃信息后用 bt命令来打印当前的函数调用栈的全部信息如下：
 
-{:.terminal}
     #0  0xb7fdd424 in __kernel_vsyscall ()
     #1  0xb7e4d1df in raise () from /lib/i386-linux-gnu/libc.so.6
     #2  0xb7e50825 in abort () from /lib/i386-linux-gnu/libc.so.6
@@ -63,11 +61,10 @@ tags: [linux, gdb]
         &mac[0], &mac[1], &mac[2], &mac[3], &mac[4], &mac[5]);
 }
 {% endcapture %}
-{% include AH/print_code %}/
+{% include AH/print_code %}
 
 这里 __u8 的定义是 `typedef unsigned char __u8;` 。在编译时其实就已经给出了警告：
 
-{:.terminal}
     警告： 格式 ‘%x’ expects argument of type ‘unsigned int *’, but argument 3 has type ‘__u8 *’ [-Wformat]
 
 我之前误以为会将 '%x' 读取到的16进制数隐式转换成 __u8 类型存入到变量中，可事实并非如此。做了个小实验如下：
@@ -85,10 +82,9 @@ int main()
     return 0;
 }
 {% endcapture %}
-{% include AH/print_code %}/
+{% include AH/print_code %}
 用 gdb 调试来单步执行，从标准输入读取 x 之前，用 p/x 命令查看 x 及该地址之后的四个字节处的16进制值如下：
 
-{:.terminal}
     (gdb) p/x x
 	$1 = 0xb7
     (gdb) p/x *(&x)
@@ -104,7 +100,6 @@ int main()
 
 输入字符 "dd" 之后再次打印查看：
 
-{:.terminal}
     (gdb) n
     dd
     8         printf("%x\n", x);

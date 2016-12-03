@@ -234,7 +234,7 @@ p = list_entry(list, Node_st, head);
 {% include AH/print_code %}
 
 原理稍微有点复杂，使用的是一个利用编译器技术的小技巧，先求得已知结构成员(list_head)在宿主结构体(Node_st)中的偏移量，再根据已知结构成员的地址和偏移量来求得宿主结构体的地址。
-主要就是靠 `container_of()` 和 `sizeofof()` 这两个宏定义来实现(这是两个 Linux 内核的通用的宏定义，不仅仅用在了链表操作中)。
+主要就是靠 `container_of()` 和 `offsetof()` 这两个宏定义来实现(这是两个 Linux 内核的通用的宏定义，不仅仅用在了链表操作中)。
 
 先来看 offsetof 宏：
 

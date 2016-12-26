@@ -9,6 +9,8 @@ tags: [tensorflow]
 
 TensorFlow是Google在2015年11月开源的一个人工智能系统，是Google Brain在之前所开发的深度学习基础架构DistBelief的改进版本，该系统可以被用于语音识别、图片识别等多个领域。而[官网](https://www.tensorflow.org)上对其的定义是：
 
+<!-- excerpt -->
+
 {:.quote}
 > TensorFlow™ is an open source software library for numerical computation using data flow graphs.
 

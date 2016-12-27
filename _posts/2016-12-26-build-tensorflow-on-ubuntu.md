@@ -1,13 +1,13 @@
 ---
 layout: post
-title: TensorFlow学习笔记(1):搭建环境
+title: TensorFlow学习笔记(1)：搭建环境
 category: programming
 tags: [tensorflow]
 ---
 
-出于对新技术的好奇以及一部分的工作需要，最近决定踏足之前从未涉及过的机器学习领域。毕竟不是从头开始做理论研究，所以还是想先从实践中直观感受一下。做了简单地了解后，决定就先从谷人希的TensorFlow系统开始尝试吧~（机器学习、深度学习的大神们请轻拍）。
+出于对新技术的好奇以及一部分的工作需要，最近决定踏足之前从未涉及过的机器学习领域。毕竟不是从头开始做理论研究，所以还是想先从实践中直观感受一下。做了简单地了解后，决定就先从谷人希的 TensorFlow 系统开始尝试吧~（机器学习、深度学习的大神们请轻拍）。
 
-TensorFlow是Google在2015年11月开源的一个人工智能系统，是Google Brain在之前所开发的深度学习基础架构DistBelief的改进版本，该系统可以被用于语音识别、图片识别等多个领域。而[官网](https://www.tensorflow.org)上对其的定义是：
+TensorFlow 是 Google 在2015年11月开源的一个人工智能系统，是 Google Brain 在之前所开发的深度学习基础架构 DistBelief 的改进版本，该系统可以被用于语音识别、图片识别等多个领域。而[官网](https://www.tensorflow.org)上对其的定义是：
 
 <!-- excerpt -->
 
@@ -54,7 +54,7 @@ TensorFlow是Google在2015年11月开源的一个人工智能系统，是Google 
 
 接下来再执行如下命令进行安装就可以了~pip会将所依赖的安装包全部自动装上，很方便。
 
-    $ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.0-cp27-none-linux_x86_64.whl` 
+    $ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.0-cp27-none-linux_x86_64.whl
 
 全部安装好后用官网所给例子验证一下。
 
